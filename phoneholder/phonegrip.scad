@@ -46,7 +46,9 @@ module phoneHolder() {
   rotate([0, 0, 180])
   overhang();
 
-  ballInterface();
+  rotate([180, 0, 0])
+  translate([phoneWidth/2 + sideThickness, -6, 0])
+  hand();
 }
 
 module ballInterface() {
@@ -91,7 +93,7 @@ translate([0, 0, 48]) {
     rotate([-90, 0, 0])
     translate([0, 0, nutRadius+8]) {
       translate([0, 0, -10])
-      cylinder(10, 4, 4, $fn=128);
+      cylinder(10, 5, 5, $fn=128);
       nutHolder();
     }
 
@@ -103,9 +105,8 @@ translate([0, 0, 48]) {
       translate([0, 0, -16])
       cylinder(10, 4, 4, $fn=128);
     }
-    
 }
 
 // cube([1, 2, 3]);
 
-// nutHolder();
+// phoneHolder();
